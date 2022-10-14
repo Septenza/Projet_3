@@ -1,0 +1,20 @@
+{
+  "name": "projet3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./Sass/main.scss:./css/style.css"
+   
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Septenza/Projet_3.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Septenza/Projet_3/issues"
+  },
+  "homepage": "https://github.com/Septenza/Projet_3#readme"
+}
