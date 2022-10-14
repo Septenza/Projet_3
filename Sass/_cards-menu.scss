@@ -1,0 +1,142 @@
+
+
+/* Pages menu - détails menu (Entrées / pLats / desserts) */
+
+.container{
+    position: relative;
+    width: 100%;
+    top: -30px;
+}
+
+
+.main {
+    &--1 {
+      padding-bottom: 35px;
+      background-color: #fff;
+      border-radius: 30px 30px 0px 0px;
+    
+      &__content {
+        display: flex;
+        font-size: 21px;
+        justify-content: space-between;
+        padding-top: 20px;
+        
+  
+        &__title {
+          font-size: 30px;
+          font-family: "shrikhand";
+          padding: 0px 44px 0px 25px;
+        }
+        &__heart {
+          position: relative;
+          height: 21px;
+          top: 30px;
+          
+        }
+      }
+    }
+  }
+  
+.main--1__content__heart  {
+  position: relative;
+  right: 45px;
+}
+  #heart--icon {
+  position: relative;
+  cursor: pointer;
+}
+
+  #heart--icon:hover .fa-heart-animated {
+  font-size: 20px;
+}
+  
+  
+
+
+/* textes et tarifs - Entrée / Plats / Desserts */
+
+.box {
+    &__menu {
+      &__title {
+        margin: 24px 0px 8px 18px;
+        border-bottom: 3px solid #99e2d0;
+        padding-bottom: 6px;
+        width: 11%;
+        color: grey;
+      }
+    }
+  
+    &__element {
+      border-radius: 10px;
+      background-color: white;
+      width: 92%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 12px;
+      box-shadow: 0 5px 16px #0000002e;
+      position: relative;
+      transform: scale(0);
+      animation-duration: 1s;
+      animation-name: menu;
+      animation-fill-mode: both;
+      /* animation: menu 1s both;  */
+    }
+  
+    &__contents {
+      display: flex;
+      &:hover .box__check {
+        width: 75px;
+        border-radius: 0px 10px 10px 0px;
+      }
+      &__title {
+        font-size: 19px;
+        margin: 0;
+      }
+  
+      &__left {
+        width: 100%;
+        padding: 0.8em;
+        position: relative;
+        border-radius: 30px;
+      }
+    
+        &__inline {
+          display: flex;
+          padding-top: 7px;
+    
+          &__subtitle {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 82%;
+            margin: 0;
+            color: grey;
+          }
+          &__price {
+            position: absolute;
+            right: 5%;
+            top: 35%;
+          }
+        }
+      }
+  
+    &__check {
+      height: 100%;
+      right: 0px;
+      top: 0;
+      width: 0px;
+      background: #99E2D0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+  }
+
+.fa-circle-check {
+  background-color: #99e2d0;
+  color: #fff;
+  font-size: 27px;
+}

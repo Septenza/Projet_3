@@ -1,0 +1,18 @@
+@import "./variables";
+@import "./header";
+@import "./animations";
+@import "./main-button";
+@import "./cards-restaurant";
+@import "./cards-menu";
+@import "./footer";
+
+
+
+body {
+    margin: 0;
+    font-family: roboto;
+}
+
+a {
+    text-decoration: none;
+}

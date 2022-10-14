@@ -1,0 +1,129 @@
+
+/* animation coeur */
+
+.fa-heart-animated {
+    color: $primaire;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    transition-duration: 0.7s;
+    bottom: 0;
+    font-size: 0px;
+    font-weight: bold;
+    background: -webkit-linear-gradient($primaire, $secondaire);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+  }
+
+
+
+/* loader homepage */
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    99.5% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.bloc {
+    
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+    &__loader {
+        background-color: transparent;
+        width: 150px;
+        height: 150px;
+        animation: spinner 3000ms 200ms;
+        box-sizing: border-box;
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        right: 50%;
+        z-index: 1;
+        margin: 160px 0 0 -69px;
+        border: 15px solid $primaire;
+        border-radius: 50%;
+        border-color: $primaire $secondaire rgb(229, 227, 227) rgb(229, 227, 227);
+        animation-fill-mode: forwards;
+
+    }
+}
+
+/*
+width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    */
+
+
+
+/* Défilement progressif des menus - cards-menu */
+
+@keyframes menu {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.anim {
+    &-1 {
+        animation-delay: 0.1s;
+    } 
+    &-2 {
+        animation-delay: 0.2s;
+        }  
+    &-3 {
+        animation-delay: 0.3s;
+        }
+    &-4 {
+        animation-delay: 0.4s;
+        }
+    &-5 {
+        animation-delay: 0.5s;
+        }
+    &-6 {
+        animation-delay: 0.6s;
+        }
+    &-7 {
+        animation-delay: 0.7s;
+        }   
+    &-8 {
+        animation-delay: 0.8s;
+        }
+    &-9 {
+        animation-delay: 0.9s;
+        }
+    &-10 {
+        animation-delay: 1s;
+        }
+}
+
+
+/*  Apparition coches droites au clic sur les plats   */ 
+         /* transition dans _cards-menu.scss */
