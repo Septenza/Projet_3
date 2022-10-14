@@ -1,0 +1,464 @@
+@charset "UTF-8";
+/* Couleurs */
+/* header Homepage */
+#header__logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  width: 180px;
+  margin: 15px;
+}
+
+.header__subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(226, 223, 223);
+  height: 50px;
+}
+.header__subtitle--text {
+  margin-left: 15px;
+}
+
+/* Header pages menu */
+.header__image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.header__back {
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 16px;
+  font-size: 25px;
+}
+
+/* animation coeur */
+.fa-heart-animated {
+  color: #9356DC;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  transition-duration: 0.7s;
+  bottom: 0;
+  font-size: 0px;
+  font-weight: bold;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* loader homepage */
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  99.5% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.bloc {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.bloc__loader {
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
+  animation: spinner 3000ms 200ms;
+  box-sizing: border-box;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  z-index: 1;
+  margin: 160px 0 0 -69px;
+  border: 15px solid #9356DC;
+  border-radius: 50%;
+  border-color: #9356DC #FF79DA rgb(229, 227, 227) rgb(229, 227, 227);
+  animation-fill-mode: forwards;
+}
+
+/*
+width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    */
+/* Défilement progressif des menus - cards-menu */
+@keyframes menu {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.anim-1 {
+  animation-delay: 0.1s;
+}
+.anim-2 {
+  animation-delay: 0.2s;
+}
+.anim-3 {
+  animation-delay: 0.3s;
+}
+.anim-4 {
+  animation-delay: 0.4s;
+}
+.anim-5 {
+  animation-delay: 0.5s;
+}
+.anim-6 {
+  animation-delay: 0.6s;
+}
+.anim-7 {
+  animation-delay: 0.7s;
+}
+.anim-8 {
+  animation-delay: 0.8s;
+}
+.anim-9 {
+  animation-delay: 0.9s;
+}
+.anim-10 {
+  animation-delay: 1s;
+}
+
+/*  Apparition coches droites au clic sur les plats   */
+/* transition dans _cards-menu.scss */
+/* Button */
+.btn {
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 120%);
+  color: #fff;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  width: 25vh;
+  height: 5vh;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 2px 2px 2px rgb(197, 195, 195);
+  font-size: 15px;
+}
+.btn:hover {
+  filter: brightness(110%);
+  box-shadow: 4px 4px 4px rgb(197, 195, 195);
+}
+
+/*  Homepage  */
+/* section bloc-introduction */
+.section--introduction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(242, 240, 240);
+  padding: 40px 30px;
+}
+.section--introduction .section__content {
+  padding: none;
+}
+.section--introduction .section__content .section__text {
+  padding-bottom: 10px;
+}
+
+/* titres */
+.section__titre {
+  margin: 20px;
+}
+
+/* Section Fonctionnement */
+.section--functioning {
+  padding: 20px 0 40px 0;
+}
+
+.tab__content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 80px;
+  margin: 20px 20px;
+  background-color: rgb(251, 250, 250);
+  border-radius: 20px;
+  box-shadow: 2px 2px 3px rgb(245, 244, 244);
+  position: relative;
+  font-size: 18px;
+}
+.tab__content .number--1 {
+  display: flex;
+  background-color: #9356DC;
+  width: 25px;
+  height: 25px;
+  border-radius: 40px;
+  position: absolute;
+  left: -8px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.tab__content .tab__icon {
+  display: flex;
+  width: 50px;
+  color: grey;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  padding-left: 20px;
+}
+.tab__content .tab__icon .tab__text {
+  padding-left: 20px;
+}
+
+/* Section Restaurants */
+.section--restaurants {
+  background-color: rgb(242, 240, 240);
+  padding: 20px 0;
+}
+.section--restaurants .all-restaurants {
+  margin: 0 20px;
+}
+.section--restaurants .restaurants {
+  display: block;
+  height: 237px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  position: relative;
+  background-color: #fff;
+}
+
+.restaurants__images img {
+  width: 100%;
+  height: 155px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.restaurants__content p {
+  color: grey;
+  margin: 5px;
+}
+
+.restaurants__content h3 {
+  margin: 5px;
+}
+
+.restaurants__content {
+  display: grid;
+  color: black;
+  padding: 5px 181px 0px 0px;
+}
+.restaurants__content .restaurants__new {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 16px;
+  color: green;
+  background-color: #99E2D0;
+  width: 25%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.restaurants__heart {
+  position: relative;
+  right: 28px;
+  top: 30px;
+  font-size: 25px;
+}
+
+.restaurants__heart:hover .fa-heart-animated {
+  position: absolute;
+  font-size: 27px;
+}
+
+/* Pages menu - détails menu (Entrées / pLats / desserts) */
+.container {
+  position: relative;
+  width: 100%;
+  top: -30px;
+}
+
+.main--1 {
+  padding-bottom: 35px;
+  background-color: #fff;
+  border-radius: 30px 30px 0px 0px;
+}
+.main--1__content {
+  display: flex;
+  font-size: 21px;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+.main--1__content__title {
+  font-size: 30px;
+  font-family: "shrikhand";
+  padding: 0px 44px 0px 25px;
+}
+.main--1__content__heart {
+  position: relative;
+  height: 21px;
+  top: 30px;
+}
+
+.main--1__content__heart {
+  position: relative;
+  right: 45px;
+}
+
+#heart--icon {
+  position: relative;
+  cursor: pointer;
+}
+
+#heart--icon:hover .fa-heart-animated {
+  font-size: 20px;
+}
+
+/* textes et tarifs - Entrée / Plats / Desserts */
+.box__menu__title {
+  margin: 24px 0px 8px 18px;
+  border-bottom: 3px solid #99e2d0;
+  padding-bottom: 6px;
+  width: 11%;
+  color: grey;
+}
+.box__element {
+  border-radius: 10px;
+  background-color: white;
+  width: 92%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 12px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1803921569);
+  position: relative;
+  transform: scale(0);
+  animation-duration: 1s;
+  animation-name: menu;
+  animation-fill-mode: both;
+  /* animation: menu 1s both;  */
+}
+.box__contents {
+  display: flex;
+}
+.box__contents:hover .box__check {
+  width: 75px;
+  border-radius: 0px 10px 10px 0px;
+}
+.box__contents__title {
+  font-size: 19px;
+  margin: 0;
+}
+.box__contents__left {
+  width: 100%;
+  padding: 0.8em;
+  position: relative;
+  border-radius: 30px;
+}
+.box__contents__inline {
+  display: flex;
+  padding-top: 7px;
+}
+.box__contents__inline__subtitle {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 82%;
+  margin: 0;
+  color: grey;
+}
+.box__contents__inline__price {
+  position: absolute;
+  right: 5%;
+  top: 35%;
+}
+.box__check {
+  height: 100%;
+  right: 0px;
+  top: 0;
+  width: 0px;
+  background: #99E2D0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.fa-circle-check {
+  background-color: #99e2d0;
+  color: #fff;
+  font-size: 27px;
+}
+
+/* Footer */
+.footer {
+  background-color: rgb(66, 64, 64);
+  padding: 18px 0px 18px 24px;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer__title {
+  font-size: 25px;
+  font-family: "shrikhand";
+}
+
+.footer__content {
+  margin-top: 15px;
+}
+
+.footer__content__subtitle {
+  margin-bottom: 8px;
+}
+
+.footer__content .fa-solid {
+  margin-right: 10px;
+  color: white;
+}
+
+.fa-handshake-angle {
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+  font-family: roboto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */
