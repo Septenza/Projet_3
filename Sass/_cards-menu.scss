@@ -50,7 +50,19 @@
   font-size: 20px;
 }
   
-  
+/* Responsive */
+
+@media (min-width: 525px) {
+  .main--1__content {
+      display: flex;
+      justify-content: center;
+      
+      &__heart {
+        margin-left: 10%;
+      }
+  }
+
+}
 
 
 /* textes et tarifs - Entrée / Plats / Desserts */
@@ -90,6 +102,8 @@
         border-radius: 0px 10px 10px 0px;
       }
       &__title {
+        text-overflow: "ellipsis";
+        overflow: hidden;
         font-size: 19px;
         margin: 0;
       }
@@ -140,3 +154,29 @@
   color: #fff;
   font-size: 27px;
 }
+
+
+/* Responsive */
+
+@media (min-width: 525px) {
+  .box {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*
+@media (min-width: 525px) {
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__menu {
+      width: 40%;
+      height: 500px;
+    }
+  }
+}
+*/

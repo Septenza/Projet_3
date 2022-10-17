@@ -2,17 +2,15 @@
 /* animation coeur */
 
 .fa-heart-animated {
-    color: $primaire;
+    background: -webkit-linear-gradient($primaire, $secondaire);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
     transition-duration: 0.7s;
     bottom: 0;
-    font-size: 0px;
-    font-weight: bold;
-    background: -webkit-linear-gradient($primaire, $secondaire);
-     -webkit-background-clip: text;
-     -webkit-text-fill-color: transparent;
+    font-size: 0px; 
   }
 
 
@@ -32,17 +30,29 @@
     }
 }
 
+@keyframes bg {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+        z-index: -1;
+    }
+}
+
+
+
 .bloc {
-    
+    background-color: rgba(255, 255, 255, 0.619);
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color: #fff;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    
+    z-index: 1;
+    animation: bg 3000ms 1750ms;
+    transition: opacity 3000ms ease-in-out;
+    animation-fill-mode: both;
+   
     &__loader {
         background-color: transparent;
         width: 150px;
@@ -63,18 +73,6 @@
     }
 }
 
-/*
-width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: #fff;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-
-    */
 
 
 

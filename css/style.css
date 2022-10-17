@@ -41,17 +41,15 @@
 
 /* animation coeur */
 .fa-heart-animated {
-  color: #9356DC;
+  background: -webkit-linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   position: absolute;
   left: 50%;
   transform: translate(-50%);
   transition-duration: 0.7s;
   bottom: 0;
   font-size: 0px;
-  font-weight: bold;
-  background: -webkit-linear-gradient(#9356DC, #FF79DA);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* loader homepage */
@@ -67,15 +65,25 @@
     opacity: 0;
   }
 }
+@keyframes bg {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
 .bloc {
+  background-color: rgba(255, 255, 255, 0.619);
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: #fff;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  z-index: 1;
+  animation: bg 3000ms 1750ms;
+  transition: opacity 3000ms ease-in-out;
+  animation-fill-mode: both;
 }
 .bloc__loader {
   background-color: transparent;
@@ -95,18 +103,6 @@
   animation-fill-mode: forwards;
 }
 
-/*
-width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: #fff;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 1;
-
-    */
 /* Défilement progressif des menus - cards-menu */
 @keyframes menu {
   0% {
@@ -236,6 +232,19 @@ width: 100%;
   padding-left: 20px;
 }
 
+/* Responsive section--functionning */
+@media (min-width: 525px) {
+  .section--functioning {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .tab {
+    margin: 20px auto 20px auto;
+    width: 60%;
+  }
+}
 /* Section Restaurants */
 .section--restaurants {
   background-color: rgb(242, 240, 240);
@@ -270,7 +279,7 @@ width: 100%;
 }
 
 .restaurants__content {
-  display: grid;
+  display: flex;
   color: black;
   padding: 5px 181px 0px 0px;
 }
@@ -289,17 +298,31 @@ width: 100%;
 }
 
 .restaurants__heart {
-  position: relative;
+  position: absolute;
   right: 28px;
-  top: 30px;
+  bottom: 33px;
   font-size: 25px;
 }
 
 .restaurants__heart:hover .fa-heart-animated {
   position: absolute;
-  font-size: 27px;
+  font-size: 26px;
+  height: 100%;
 }
 
+/* Responsive section--restaurants*/
+@media (min-width: 525px) {
+  .section--restaurants {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .all-restaurants {
+    margin: 20px auto 20px auto;
+    width: 80%;
+  }
+}
 /* Pages menu - détails menu (Entrées / pLats / desserts) */
 .container {
   position: relative;
@@ -343,6 +366,16 @@ width: 100%;
   font-size: 20px;
 }
 
+/* Responsive */
+@media (min-width: 525px) {
+  .main--1__content {
+    display: flex;
+    justify-content: center;
+  }
+  .main--1__content__heart {
+    margin-left: 10%;
+  }
+}
 /* textes et tarifs - Entrée / Plats / Desserts */
 .box__menu__title {
   margin: 24px 0px 8px 18px;
@@ -375,6 +408,8 @@ width: 100%;
   border-radius: 0px 10px 10px 0px;
 }
 .box__contents__title {
+  text-overflow: "ellipsis";
+  overflow: hidden;
   font-size: 19px;
   margin: 0;
 }
@@ -420,6 +455,28 @@ width: 100%;
   font-size: 27px;
 }
 
+/* Responsive */
+@media (min-width: 525px) {
+  .box {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/*
+@media (min-width: 525px) {
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__menu {
+      width: 40%;
+      height: 500px;
+    }
+  }
+}
+*/
 /* Footer */
 .footer {
   background-color: rgb(66, 64, 64);
@@ -452,6 +509,23 @@ width: 100%;
   font-size: 12px;
 }
 
+/* RESPONSIVE */
+@media (min-width: 700px) and (max-width: 1600px) {
+  .footer {
+    text-align: center;
+    padding: 15px 0px 15px 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1601px) {
+  .footer {
+    padding: 18px 0px 18px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
 body {
   margin: 0;
   font-family: roboto;

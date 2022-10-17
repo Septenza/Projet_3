@@ -72,6 +72,24 @@
 }
 }
 
+/* Responsive section--functionning */
+
+  
+  @media (min-width: 525px) {
+    .section--functioning {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        }
+
+      .tab {
+        margin: 20px auto 20px auto;
+        width: 60%;
+      }
+    }
+
+
 
 /* Section Restaurants */
 
@@ -107,7 +125,7 @@
 }
 
 .restaurants__content {
-    display: grid;
+    display: flex;
     color: black;
     padding: 5px 181px 0px 0px;
     
@@ -127,20 +145,35 @@
 }
 
 
-.restaurants__heart {
-    position: relative;
+.restaurants__heart { 
+    position: absolute;
     right: 28px;
-    top: 30px;
+    bottom: 33px;
     font-size: 25px;
 }
   
 .restaurants__heart:hover .fa-heart-animated {
     position: absolute;
-    font-size: 27px;
+    font-size: 26px;
+    height: 100%;
 }
 
 
+/* Responsive section--restaurants*/
 
+@media (min-width: 525px) {
+    .section--restaurants {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        }
+
+      .all-restaurants {
+        margin: 20px auto 20px auto;
+        width: 80%;
+      }
+    }
 
 
 
