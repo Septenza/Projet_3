@@ -115,6 +115,7 @@
         padding: 0.8em;
         position: relative;
         border-radius: 30px;
+        overflow: hidden;
       }
     
         &__inline {
@@ -129,6 +130,7 @@
             margin: 0;
             color: grey;
           }
+          
           &__price {
             position: absolute;
             right: 5%;

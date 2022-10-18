@@ -150,12 +150,12 @@
     right: 28px;
     bottom: 33px;
     font-size: 25px;
-}
-  
-.restaurants__heart:hover .fa-heart-animated {
+
+    &:hover .fa-heart-animated {
     position: absolute;
     font-size: 26px;
     height: 100%;
+}
 }
 
 

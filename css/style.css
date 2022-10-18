@@ -145,8 +145,20 @@
   animation-delay: 1s;
 }
 
-/*  Apparition coches droites au clic sur les plats   */
-/* transition dans _cards-menu.scss */
+/*  Apparition et rotation coches droites au clic sur les plats   */
+@keyframes check {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.box__contents:hover .fa-circle-check {
+  animation: check 1000ms;
+  animation-fill-mode: forwards;
+}
+
 /* Button */
 .btn {
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 120%);
@@ -303,7 +315,6 @@
   bottom: 33px;
   font-size: 25px;
 }
-
 .restaurants__heart:hover .fa-heart-animated {
   position: absolute;
   font-size: 26px;
@@ -419,6 +430,7 @@
   padding: 0.8em;
   position: relative;
   border-radius: 30px;
+  overflow: hidden;
 }
 .box__contents__inline {
   display: flex;
