@@ -97,14 +97,16 @@
   
     &__contents {
       display: flex;
+    
       &:hover .box__check {
         width: 75px;
         border-radius: 0px 10px 10px 0px;
       }
       &__title {
-        text-overflow: "ellipsis";
+        text-overflow: ellipsis;
+        white-space: nowrap;
         overflow: hidden;
-        font-size: 19px;
+        font-size: 18px;
         margin: 0;
       }
   
@@ -154,6 +156,7 @@
   color: #fff;
   font-size: 27px;
 }
+
 
 
 /* Responsive */
