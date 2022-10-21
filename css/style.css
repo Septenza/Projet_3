@@ -191,7 +191,7 @@
   padding: 40px 30px;
 }
 .section--introduction .section__content {
-  padding: none;
+  padding: 0;
 }
 .section--introduction .section__content .section__text {
   padding-bottom: 10px;
