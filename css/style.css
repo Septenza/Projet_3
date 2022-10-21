@@ -476,20 +476,6 @@
     margin-right: auto;
   }
 }
-/*
-@media (min-width: 525px) {
-  .box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &__menu {
-      width: 40%;
-      height: 500px;
-    }
-  }
-}
-*/
 /* Footer */
 .footer {
   background-color: rgb(66, 64, 64);
